@@ -19,7 +19,7 @@ void drawHangman(int mistakes)
         cout << "=======\n";
     }
     else if (mistakes == 1)
-    { wrfs
+    {
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";

@@ -178,7 +178,7 @@ int main()
 
         if (strcmp(hidden, secretWord) == 0)
         {
-            cout << "\n Вітаю, ти виграв\n";
+            cout << "\nВітаю, ти виграв\n";
             cout << "Загадане слово: " << secretWord << endl;
             break;
         }

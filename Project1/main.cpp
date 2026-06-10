@@ -130,7 +130,7 @@ int main()
         cout << "\n\nВикористані літери: " << used << endl;
 
         char letter;
-        cout << "\nВведіть літеру: ";
+        cout << "\nВведи літеру: ";
         cin >> letter;
 
         bool alreadyUsed = false;
@@ -146,7 +146,7 @@ int main()
 
         if (alreadyUsed)
         {
-            cout << "\nЦя літера вже використовувалась\n";
+            cout << "\nЦя літера вже була\n";
             continue;
         }
 

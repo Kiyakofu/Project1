@@ -132,6 +132,23 @@ int main()
         cout << "\nВведіть літеру: ";
         cin >> letter;
 
+        bool alreadyUsed = false;
+
+        for (int i = 0; used[i] != '\0'; i++)
+        {
+            if (used[i] == letter)
+            {
+                alreadyUsed = true;
+                break;
+            }
+        }
+
+        if (alreadyUsed)
+        {
+            cout << "\nЦя літера вже використовувалась!\n";
+            continue;
+        }
+
         bool found = false;
 
         for (int i = 0; i < len; i++)
@@ -162,6 +179,7 @@ int main()
         {
             cout << "\n Вітаємо! Ви перемогли!\n";
             cout << "Загадане слово: " << secretWord << endl;
+            break;
         }
     }
 

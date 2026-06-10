@@ -116,6 +116,7 @@ int main()
     cout << "        ГРА ШИБЕНИЦЯ\n";
     cout << "================================\n";
     cout << "Пиши англійсикі літри\n";
+    cout << "Приклад слова яке може бути: kozak\n";
 
     while (mistakes < 6)
     {
@@ -159,16 +160,13 @@ int main()
 
         if (strcmp(hidden, secretWord) == 0)
         {
-            cout << "\n🎉 Вітаємо! Ви перемогли!\n";
+            cout << "\n Вітаємо! Ви перемогли!\n";
             cout << "Загадане слово: " << secretWord << endl;
-            return 0;
         }
     }
 
     drawHangman(6);
 
-    cout << "\n💀 Ви програли!\n";
+    cout << "\nВи програли!\n";
     cout << "Загадане слово було: " << secretWord << endl;
-
-    return 0;
 }

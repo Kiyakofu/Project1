@@ -81,7 +81,6 @@ void drawHuman(int mistakes)
         break;
     }
 }
-
 int main()
 {
     system("chcp 65001 > nul");
@@ -147,7 +146,7 @@ int main()
 
         if (alreadyUsed)
         {
-            cout << "\nЦя літера вже використовувалась!\n";
+            cout << "\nЦя літера вже використовувалась\n";
             continue;
         }
 
@@ -170,16 +169,16 @@ int main()
         if (!found)
         {
             mistakes++;
-            cout << "\nНеправильно!\n";
+            cout << "\nНеправильно\n";
         }
         else
         {
-            cout << "\nПравильно!\n";
+            cout << "\nПравильно\n";
         }
 
         if (strcmp(hidden, secretWord) == 0)
         {
-            cout << "\n Вітаємо! Ви перемогли!\n";
+            cout << "\n Вітаю, ти виграв\n";
             cout << "Загадане слово: " << secretWord << endl;
             break;
         }
@@ -187,6 +186,6 @@ int main()
 
     drawHuman(6);
 
-    cout << "\nВи програли!\n";
+    cout << "\nТи програв\n";
     cout << "Загадане слово було: " << secretWord << endl;
 }

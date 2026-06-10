@@ -4,12 +4,13 @@
 
 using namespace std;
 
-void drawHangman(int mistakes)
+void drawHuman(int mistakes)
 {
     cout << "\n";
 
-    if (mistakes == 0)
+    switch (mistakes)
     {
+    case 0:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << "     |\n";
@@ -17,29 +18,29 @@ void drawHangman(int mistakes)
         cout << "     |\n";
         cout << "     |\n";
         cout << "=======\n";
-    }
-    else if (mistakes == 1)
-    {
-        cout << " +---+\n";
-        cout << " |   |\n";
-        cout << " O   |\n";
-        cout << "     |\n";
-        cout << "     |\n";
-        cout << "     |\n";
-        cout << "=======\n";
-    }
-    else if (mistakes == 2)
-    {
+        break;
+
+    case 1:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";
+        cout << "     |\n";
+        cout << "     |\n";
+        cout << "     |\n";
+        cout << "=======\n";
+        break;
+
+    case 2:
+        cout << " +---+\n";
+        cout << " |   |\n";
+        cout << " O   |\n";
         cout << " |   |\n";
         cout << "     |\n";
         cout << "     |\n";
         cout << "=======\n";
-    }
-    else if (mistakes == 3)
-    {
+        break;
+
+    case 3:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";
@@ -47,9 +48,9 @@ void drawHangman(int mistakes)
         cout << "     |\n";
         cout << "     |\n";
         cout << "=======\n";
-    }
-    else if (mistakes == 4)
-    {
+        break;
+
+    case 4:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";
@@ -57,9 +58,9 @@ void drawHangman(int mistakes)
         cout << "     |\n";
         cout << "     |\n";
         cout << "=======\n";
-    }
-    else if (mistakes == 5)
-    {
+        break;
+
+    case 5:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";
@@ -67,9 +68,9 @@ void drawHangman(int mistakes)
         cout << "/    |\n";
         cout << "     |\n";
         cout << "=======\n";
-    }
-    else
-    {
+        break;
+
+    default:
         cout << " +---+\n";
         cout << " |   |\n";
         cout << " O   |\n";
@@ -77,6 +78,7 @@ void drawHangman(int mistakes)
         cout << "/ \\  |\n";
         cout << "     |\n";
         cout << "=======\n";
+        break;
     }
 }
 
@@ -120,7 +122,7 @@ int main()
 
     while (mistakes < 6)
     {
-        drawHangman(mistakes);
+        drawHuman(mistakes);
 
         cout << "\nСлово: ";
         for (int i = 0; i < len; i++)
@@ -183,7 +185,7 @@ int main()
         }
     }
 
-    drawHangman(6);
+    drawHuman(6);
 
     cout << "\nВи програли!\n";
     cout << "Загадане слово було: " << secretWord << endl;
